@@ -1,6 +1,6 @@
-# Assessment 1 – Food Delivery Time Prediction
+# Assignment ment 1 – Food Delivery Time Prediction
 
-This project is part of my Machine Learning course assessment in Tutedude.
+This project is part of my Machine Learning course Assignment ment in Tutedude.
 
 The goal of this project is to predict food delivery time and analyze the factors that affect delivery performance.
 
@@ -98,9 +98,9 @@ Evaluation metrics used:
 This project helped me understand the complete machine learning workflow including data preprocessing, feature engineering, model training, and evaluation.
 
 It also gave practical experience in applying regression and classification techniques to real-world problems.
-# Assessment 1 – Food Delivery Time Prediction
+# Assignment ment 1 – Food Delivery Time Prediction
 
-This project is part of my Machine Learning course assessment in Tutedude.
+This project is part of my Machine Learning course Assignment ment in Tutedude.
 
 The goal of this project is to predict food delivery time and analyze the factors that affect delivery performance.
 

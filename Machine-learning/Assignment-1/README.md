@@ -1,4 +1,4 @@
-# Assignment ment 1 – Food Delivery Time Prediction
+# Assignment 1 – Food Delivery Time Prediction
 
 This project is part of my Machine Learning course Assignment ment in Tutedude.
 
@@ -6,195 +6,108 @@ The goal of this project is to predict food delivery time and analyze the factor
 
 ---
 
-## 🎯 Objective
 
-The main objective of this project is:
+## 📌 Project Objective
 
-- To predict delivery time using Linear Regression
-- To classify deliveries as Fast or Delayed using Logistic Regression
-- To understand how distance, traffic, weather, and experience affect delivery time
+The objective of this project is to analyze the factors affecting food delivery time and build predictive models to:
 
----
+1. Predict delivery time using regression models.
+2. Classify deliveries as Fast or Delayed using classification models.
 
-## 📊 Dataset
-
-The dataset contains information such as:
-
-- Distance between customer and restaurant
-- Traffic conditions
-- Weather conditions
-- Delivery person experience
-- Order cost
-- Delivery time
+The project compares baseline linear models with ensemble methods and provides analytical insights based on model performance.
 
 ---
 
-## ⚙️ What I Did in This Project
+## 📊 Dataset Description
 
-### 1️⃣ Data Preprocessing
-- Loaded the dataset
-- Checked for missing values
-- Removed unnecessary columns
-- Created a new feature called **Rush_Hour**
-- Converted categorical data into numerical format using one-hot encoding
-- Standardized numerical features
+The dataset contains information about:
+
+- Customer and restaurant locations
+- Distance between locations
+- Weather and traffic conditions
+- Delivery personnel experience
+- Order cost and tip amount
+- Delivery time (target variable)
+
+Both regression and classification modeling techniques were applied.
 
 ---
 
-### 2️⃣ Exploratory Data Analysis (EDA)
-- Checked basic statistics
+## 🔎 Exploratory Data Analysis (EDA)
+
+- Checked missing values
+- Generated descriptive statistics
 - Created correlation heatmap
-- Generated scatter plots and pair plots
+- Used pair plots for feature relationships
 - Detected outliers using boxplots
 
----
-
-### 3️⃣ Linear Regression
-Used to predict delivery time.
-
-Evaluation metrics used:
-- Mean Squared Error (MSE)
-- Mean Absolute Error (MAE)
-- R² Score
+Key finding:
+Distance and traffic conditions influence delivery time.
 
 ---
 
-### 4️⃣ Logistic Regression
-Used to classify deliveries as Fast (0) or Delayed (1).
+## 🛠 Feature Engineering
 
-Evaluation metrics used:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
-- ROC Curve
+- Implemented Haversine formula to calculate geographical distance using latitude and longitude.
+- Created a `Rush_Hour` feature to capture peak delivery time effects.
+- Applied one-hot encoding for categorical variables.
+- Standardized numerical features.
 
 ---
 
-## 📌 Key Observations
+## 📈 Models Implemented
 
-- Distance and traffic conditions significantly impact delivery time.
-- Rush hour increases the chances of delay.
-- Experienced delivery personnel reduce delays.
-- Both regression and classification models performed reasonably well.
+### 1️⃣ Linear Regression (Baseline)
 
----
-
-## 🛠 Tools Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
+- Evaluated using MSE, MAE, and R².
+- Observed weak performance (negative R²).
+- Concluded that linear assumptions may not capture complex delivery patterns.
 
 ---
 
-## ✅ Conclusion
+### 2️⃣ Logistic Regression (Baseline Classification)
 
-This project helped me understand the complete machine learning workflow including data preprocessing, feature engineering, model training, and evaluation.
-
-It also gave practical experience in applying regression and classification techniques to real-world problems.
-# Assignment ment 1 – Food Delivery Time Prediction
-
-This project is part of my Machine Learning course Assignment ment in Tutedude.
-
-The goal of this project is to predict food delivery time and analyze the factors that affect delivery performance.
+- Classified deliveries as Fast or Delayed.
+- Evaluated using Accuracy, Precision, Recall, F1-score, and ROC-AUC.
+- Performance was limited, indicating weak separability of classes.
 
 ---
 
-## 🎯 Objective
+### 3️⃣ Random Forest (Improved Model)
 
-The main objective of this project is:
-
-- To predict delivery time using Linear Regression
-- To classify deliveries as Fast or Delayed using Logistic Regression
-- To understand how distance, traffic, weather, and experience affect delivery time
+- Applied Random Forest Regressor and Classifier.
+- Compared performance against baseline models.
+- Demonstrated improved handling of non-linear relationships.
 
 ---
 
-## 📊 Dataset
+## 📊 Model Comparison
 
-The dataset contains information such as:
-
-- Distance between customer and restaurant
-- Traffic conditions
-- Weather conditions
-- Delivery person experience
-- Order cost
-- Delivery time
+- Linear models showed limited predictive power.
+- Ensemble method (Random Forest) improved performance.
+- Delivery prediction appears to involve complex, non-linear patterns.
 
 ---
 
-## ⚙️ What I Did in This Project
+## 💡 Key Insights
 
-### 1️⃣ Data Preprocessing
-- Loaded the dataset
-- Checked for missing values
-- Removed unnecessary columns
-- Created a new feature called **Rush_Hour**
-- Converted categorical data into numerical format using one-hot encoding
-- Standardized numerical features
+1. Distance plays a major role in delivery time.
+2. Rush hour increases delay probability.
+3. Simple linear models are insufficient for this dataset.
+4. Ensemble methods better capture delivery dynamics.
 
 ---
 
-### 2️⃣ Exploratory Data Analysis (EDA)
-- Checked basic statistics
-- Created correlation heatmap
-- Generated scatter plots and pair plots
-- Detected outliers using boxplots
+## 📁 Files Included
+
+- `Food_Delivery_Time_Prediction.ipynb` – Complete notebook
+- Dataset file
+- README.md
 
 ---
 
-### 3️⃣ Linear Regression
-Used to predict delivery time.
+## 🏁 Conclusion
 
-Evaluation metrics used:
-- Mean Squared Error (MSE)
-- Mean Absolute Error (MAE)
-- R² Score
+The project demonstrates that traditional linear models may struggle with real-world delivery prediction tasks. More advanced ensemble models provide better performance and deeper analytical insights.
 
----
-
-### 4️⃣ Logistic Regression
-Used to classify deliveries as Fast (0) or Delayed (1).
-
-Evaluation metrics used:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
-- ROC Curve
-
----
-
-## 📌 Key Observations
-
-- Distance and traffic conditions significantly impact delivery time.
-- Rush hour increases the chances of delay.
-- Experienced delivery personnel reduce delays.
-- Both regression and classification models performed reasonably well.
-
----
-
-## 🛠 Tools Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
-
----
-
-## ✅ Conclusion
-
-This project helped me understand the complete machine learning workflow including data preprocessing, feature engineering, model training, and evaluation.
-
-It also gave practical experience in applying regression and classification techniques to real-world problems.
+This assessment focuses on model comparison, performance evaluation, and honest interpretation of results.
